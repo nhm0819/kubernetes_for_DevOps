@@ -6,12 +6,12 @@
 minikube start \
     --network-plugin=cni \
     --enable-default-cni \
-    --container-runtime=containerd \
-    --bootstrapper=kubeadm \
+    --cni calico \
     --nodes 3 \
     --cpus 4 \
     --memory 8g \
-    --cni calico
+    --bootstrapper=kubeadm \
+
 ```
 
 
