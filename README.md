@@ -1,6 +1,5 @@
 # kubernetes_for_DevOps
 
-## kubeadm 사용하기
 
 ## minikube 사용하기
 ```
@@ -14,3 +13,7 @@ minikube start \
     --memory 8g \
     --cni calico
 ```
+
+
+## kubeadm 사용하기
+
