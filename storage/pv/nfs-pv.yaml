@@ -6,6 +6,7 @@ spec:
   containers:
     - name: mongodb
       image: mongo
+      command: ["mongod"]
       volumeMounts:
       - mountPath: /data/db
         name: mongodb
@@ -38,9 +39,6 @@ spec:
   accessModes:
     - ReadWriteOnce
     - ReadOnlyMany
-  mountOptions:
-    - hard
-    - nfsvers=4.1
   persistentVolumeReclaimPolicy: Retain
   storageClassName: nfs-pv-class
   nfs:
