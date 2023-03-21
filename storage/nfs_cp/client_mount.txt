@@ -1,0 +1,12 @@
+docker exec minikube mount nfs:/home/nfs /home/nfs
+docker exec minikube-m02 mount nfs:/home/nfs /home/nfs
+docker exec minikube-m03 mount nfs:/home/nfs /home/nfs
+
+docker exec minikube mkdir /home/mongo
+docker exec minikube-m02 mkdir /home/mongo
+docker exec minikube-m03 mkdir /home/mongo
+
+docker exec minikube mount nfs:/home/mongo /home/mongo
+docker exec minikube-m02 mount nfs:/home/mongo /home/mongo
+docker exec minikube-m03 mount nfs:/home/mongo /home/mongo
+

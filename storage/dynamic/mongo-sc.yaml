@@ -26,22 +26,5 @@ spec:
   resources:
     requests:
       storage: 10Gi
-  storageClassName: ""
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: nfs-pv
-spec:
-  capacity:
-    storage: 10Gi
-  volumeMode: Filesystem
-  accessModes:
-    - ReadWriteOnce
-    - ReadOnlyMany
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: ""
-  nfs:
-    server: 192.168.49.5
-    path: /home/mongo
+  storageClassName: standard
 
