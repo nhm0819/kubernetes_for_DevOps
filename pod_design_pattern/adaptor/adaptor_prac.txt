@@ -1,0 +1,5 @@
+# https://github.com/bbachi/k8s-adaptor-container-pattern 코드 참조
+kubectl apply -f https://raw.githubusercontent.com/bbachi/k8s-adaptor-container-pattern/master/pod.yml
+kubectl port-forward adapter-container-demo 8080:3080
+curl localhost:8080/logs
+

@@ -1,0 +1,6 @@
+# 참조 : https://github.com/bbachi/k8s-adaptor-container-pattern
+
+kubectl apply -f https://raw.githubusercontent.com/bbachi/k8s-ambassador-container-pattern/master/pod.yml
+kubectl exec -it ambassador-container-demo -c ambassador-container -- curl localhost:9000
+# <현재는 403으로 정상적으로 통신 불가>
+kubectl logs ambassador-container-demo main-container
