@@ -1,9 +1,6 @@
 minikube start \
-    --network-plugin=cni \
-    --enable-default-cni \
+    --kubernetes-version=1.25.3 \
     --cni calico \
     --nodes 3 \
     --cpus 4 \
-    --memory 8g \
-    --bootstrapper=kubeadm \
-
+    --memory 8g
