@@ -1,0 +1,8 @@
+minikube mount /home/hongmin/kubernetes_for_DevOps/mnt:/root/mnt
+
+# cluster 내부에서 etcdctl 파일 위치 확인
+docker exec -it --user root minikube find / -type f -name etcdctl 2>/dev/null | head -1
+
+
+docker exec -it minikube sudo ETCDCTL_API=3 "위의 함수 결과" --endpoints 127.0.0.1:2379 --cacert /var/lib/minikube/certs/etcd/ca.crt --cert /var/lib/minikube/certs/etcd/server.crt --key /var/lib/minikube/certs/etcd/server.key snapshot save /root/mnt/snapshotdb
+
